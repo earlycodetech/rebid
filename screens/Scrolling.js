@@ -16,13 +16,17 @@ export function Scrolling() {
 
            <FlatList
            data={demoData}
-           renderItem={({item}) => {
-            return (
-                <View style={styles.productBlock}>
-                    <Text>{item.product}</Text>
-                    <Text>{item.amount}</Text>
-                </View>
-            )
+           renderItem={({item,index}) => {
+            if (index < 3) {
+                return (
+                    <View style={styles.productBlock}>
+                        <Text>{item.product}</Text>
+                        <Text>{item.amount}</Text>
+                    </View>
+                )
+            } else {
+                return false;
+            }
            }}
            key={({item}) => item.id}/>
         </View>
