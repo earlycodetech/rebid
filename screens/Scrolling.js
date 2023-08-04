@@ -1,7 +1,13 @@
-import { View,Text,StyleSheet,ScrollView,FlatList } from "react-native";
+import { View,Text,StyleSheet,ScrollView,FlatList,Alert,TouchableOpacity,ToastAndroid } from "react-native";
 import { demoData } from "../assets/data";
 
 export function Scrolling() {
+    ToastAndroid.show(
+        'Welcome to Rebid',
+        ToastAndroid.LONG,
+        ToastAndroid.CENTER
+    );
+
     return (
         <View>
             <ScrollView
@@ -16,17 +22,26 @@ export function Scrolling() {
 
            <FlatList
            data={demoData}
-           renderItem={({item,index}) => {
-            if (index < 3) {
-                return (
-                    <View style={styles.productBlock}>
-                        <Text>{item.product}</Text>
-                        <Text>{item.amount}</Text>
-                    </View>
-                )
-            } else {
-                return false;
-            }
+           renderItem={({item}) => {
+            return (
+                <TouchableOpacity 
+                style={styles.productBlock}
+                onPress={() => Alert.alert(
+                    'information',
+                    `Product ID is ${item.id}`,
+                    [
+                        {text:'Okay'},
+                        {
+                            text:'Action',
+                            onPress: () => console.log('>>>> from Alert')
+                        }
+                    ]
+                )}
+                >
+                    <Text>{item.product}</Text>
+                    <Text>{item.amount}</Text>
+                </TouchableOpacity>
+            )
            }}
            key={({item}) => item.id}/>
         </View>
