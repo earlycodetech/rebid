@@ -1,9 +1,9 @@
-import { Scrolling } from "./screens/Scrolling";
+import { ScreenLayouts } from "./screens/ScreenLayouts";
 
 export default function App() {
   return (
     <>
-    <Scrolling/>
+    <ScreenLayouts/>
     </>
   );
 } 
