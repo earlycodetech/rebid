@@ -1,9 +1,9 @@
 
-import { BuiltInCom } from "./screens/BuiltInComp";
+import { Scrolling } from "./screens/Scrolling";
 export default function App() {
   return (
     <>
-  <BuiltInCom/>
+  <Scrolling/>
    
      </>
   );
