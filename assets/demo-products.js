@@ -1,8 +1,8 @@
 export const demoProducts = [
     {
-        title:'2bdrm Apartment in Ayobo for rent',
+        title:'2 bedrooms Apartment in Ayobo for rent',
         desc:'',
-        imageUr:'https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg',
+        imageUr:'https://pictures-nigeria.jijistatic.com/128842763_ODk5LTIwNDgtYjE5MWUxZTZiMQ.webp',
         timePosted:1691611151373,
         numberOfBids:2,
         currentBid:5600000
@@ -22,14 +22,6 @@ export const demoProducts = [
         timePosted:1651681151373,
         numberOfBids:17,
         currentBid:6000
-    },
-    {
-        title:'',
-        desc:'',
-        imageUr:'',
-        timePosted:1691681151373,
-        numberOfBids:13,
-        currentBid:56000
     },
     {
         title:'Good Quality Chest (Bd 108)Freezer',
