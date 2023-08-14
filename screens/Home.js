@@ -5,11 +5,14 @@ import {
     SafeAreaView,
     Platform,
     StatusBar,
-    TouchableOpacity
+    TouchableOpacity,
+    Image,
+    FlatList
 } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faShoppingCart,faGavel } from "@fortawesome/free-solid-svg-icons";
 import { theme } from '../config/theme';
+import { demoProducts } from '../assets/demo-products';
 
 export function Home() {
 
@@ -18,7 +21,6 @@ export function Home() {
             <View style={styles.container}>
                 <View style={styles.header}>
                     <Text style={styles.brandName}>Rebid</Text>
-
                     <View style={styles.headerControls}>
                         <TouchableOpacity style={styles.headerOption}>
                             <FontAwesomeIcon 
@@ -38,7 +40,25 @@ export function Home() {
                 </View>
 
                 <View style={styles.expiringBlock}>
-
+                    <Text style={styles.expSoonText}>Expiring soon</Text>
+                    
+                    <View style={styles.expItemsBlk}>
+                        <FlatList
+                        data={demoProducts}
+                        renderItem={({item}) => (
+                            <TouchableOpacity style={styles.expItem}>
+                                <Image
+                                style={styles.productImg}
+                                source={{uri:item.imageUr}}/>
+                                <View style={styles.expItemsDetailsBlk}>
+                                    <Text style={{}}>Ending in 1d 5hrs 32min 44secs</Text>
+                                    <Text style={{}}>{item.title}</Text>
+                                    <Text style={{}}>Current bid: NGN{item.currentBid}</Text>
+                                </View>
+                            </TouchableOpacity>
+                        )}
+                        key={({item}) => item.id}/>
+                    </View>
                 </View>
 
                 <View style={styles.recentBlock}>
@@ -92,6 +112,25 @@ const styles = StyleSheet.create({
     //new ends
     expiringBlock:{
         flex:1.5,
+        flexDirection:'column',
+        gap:6,
+    },
+    expSoonText:{
+        fontSize:20,
+        fontWeight:'200'
+    },
+    expItemsBlk:{
+
+    },
+    expItem:{
+
+    },
+    productImg:{
+        width:160,
+        height:360
+    },
+    expItemsDetailsBlk:{
+
     },
     recentBlock:{
         flex:1.5,
