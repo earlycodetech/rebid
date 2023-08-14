@@ -1,9 +1,9 @@
-import { BuiltInCom } from "./screens/BuiltInComp";
+import { Home } from "./screens/Home";
 
 export default function App() {
   return (
     <>
-    <BuiltInCom/>
+    <Home/>
     </>
   );
-} 
+}
