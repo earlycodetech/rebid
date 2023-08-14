@@ -1,9 +1,9 @@
-import { Upload } from "./screens/upload";
+import { CreateAuction } from "./screens/CreateAuction";
 
 export default function App() {
   return (
     <>
-    <Upload/>
+    <CreateAuction/>
     </>
 );
 }

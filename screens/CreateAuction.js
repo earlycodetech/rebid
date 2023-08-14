@@ -9,7 +9,7 @@ import { text } from "@fortawesome/fontawesome-svg-core";
 
 
 
-export function Upload(){
+export function CreateAuction(){
     const [title, setTitle] = useState('');
     const [bid, setstartBid] = useState('');
     const[desc,setDesc] = useState('')
