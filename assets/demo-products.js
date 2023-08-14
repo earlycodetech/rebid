@@ -1,6 +1,6 @@
 export const demoProducts = [
     {
-        title:'2 bedroom Apartment in Ayobo for rent',
+        title:'2 bedrooms Apartment in Ayobo for rent',
         desc:'',
         imageUr:'https://pictures-nigeria.jijistatic.com/128842763_ODk5LTIwNDgtYjE5MWUxZTZiMQ.webp',
         timePosted:1691611151373,
