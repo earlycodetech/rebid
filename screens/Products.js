@@ -4,10 +4,7 @@ import { demoProducts } from "../assets/demo-products";
 import { faCartShopping, faGavel, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { IconButton, TextInput } from "react-native-paper";
-
-
 export const Products = () => {
-    
         time = 1692106354000;
         newDate =Date.now();
         difference = newDate - time;
@@ -15,14 +12,11 @@ export const Products = () => {
         minuites =seconds/60
         hours = minuites/60
         timePast= Math.floor(hours)+'Hrs';
-   
-    return (
-
-        <ScrollView style={styles.back} >
+    return ( <ScrollView style={styles.back} >
             <ImageBackground source={require('../assets/header.jpg')}>
                 <View style={styles.header}>
                     <View style={styles.search}>
-                        <TextInput placeholder="Search Hear" />
+                        <TextInput placeholder="Search Here" />
                     </View>
                 </View>
             </ImageBackground>
@@ -41,9 +35,7 @@ export const Products = () => {
                         </ImageBackground>
                         <View style={styles.content}>
                             <Text style={styles.text}>{item.title}</Text>
-                            <Text style={styles.text}>Products Description</Text>
-                            <Text style={styles.text}>Recent Bid</Text>
-                            <View style={styles.pLower}>
+                           <View style={styles.pLower}>
                                 <Text id="time">{timePast}</Text>
                                 <Text>{item.currentBid}</Text>
                             </View>
@@ -55,18 +47,9 @@ export const Products = () => {
                                     padding: 7,
                                 }}>View Aution</Text>
                             </TouchableOpacity>
-                            {/* <Button mode="outlined" style={styles.product_btn} >View Auction</Button> */}
-    
-                        </View>
+                           </View>
                     </View>
-                </View>
-
-                )
-
-            }}
-            >
-
-           
+                </View>) }}>           
             </FlatList>
         </ScrollView>
     )
@@ -123,8 +106,6 @@ const styles = StyleSheet.create({
         padding: 20,
         flexWrap:'wrap',
         flexDirection:'row',
-
-
     },
     product: {
         width: 150,
@@ -135,7 +116,5 @@ const styles = StyleSheet.create({
     back: {
         flex: 1,
         backgroundColor: theme.colors.dullRed0,
-
-
     }
 })
