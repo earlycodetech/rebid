@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { theme } from '../config/theme';
 import { demoProducts } from '../assets/demo-products';
 import { categories } from "../assets/categories";
+import { CommaSepNum } from '../utilities/comma-sep-num';
 
 export function Home() {
 
@@ -56,7 +57,7 @@ export function Home() {
                                 <View style={styles.expItemsDetailsBlk}>
                                     <Text style={{fontSize:12}}>Ending in 1d 5hrs 32min 44secs</Text>
                                     <Text style={{fontSize:16}}>{item.title.length > 24 ? item.title.slice(0,24)+'...' : item.title}</Text>
-                                    <Text style={{fontSize:20,fontWeight:'600'}}>₦{item.currentBid}</Text>
+                                    <Text style={{fontSize:20,fontWeight:'600'}}>₦{CommaSepNum(item.currentBid)}</Text>
                                 </View>
                             </TouchableOpacity>
                         )}
@@ -84,7 +85,7 @@ export function Home() {
                                 <View style={styles.expItemsDetailsBlk}>
                                     <Text style={{fontSize:12,color:theme.colors.dullRed0}}>Ending in 1d 5hrs 32min 44secs</Text>
                                     <Text style={{fontSize:16,color:theme.colors.dullRed1}}>{item.title.length > 24 ? item.title.slice(0,24)+'...' : item.title}</Text>
-                                    <Text style={{fontSize:20,fontWeight:'600',color:theme.colors.dullRed1}}>₦{item.currentBid}</Text>
+                                    <Text style={{fontSize:20,fontWeight:'600',color:theme.colors.dullRed1}}>₦{CommaSepNum(item.currentBid)}</Text>
                                 </View>
                             </TouchableOpacity>
                         )}
