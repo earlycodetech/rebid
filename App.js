@@ -1,11 +1,10 @@
-import { Home } from "./screens/Home";
-import { Products } from "./screens/Products";
-import { CreateAuction } from "./screens/CreateAuction";
+import { StackNavigation } from "./screens/stack-navigation";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
-    <>
-    <CreateAuction/>
-    </>
-  );
+    <NavigationContainer>
+      <StackNavigation/>
+    </NavigationContainer>
+  )
 }
