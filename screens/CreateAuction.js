@@ -4,96 +4,56 @@ import { useState,useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { theme } from "../config/theme";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
-import { text } from "@fortawesome/fontawesome-svg-core";
 
 export function CreateAuction(){
     const [title, setTitle] = useState('');
     const [bid, setstartBid] = useState('');
-    const[desc,setDesc] = useState('')
+    const[desc,setDesc] = useState('');
+
     return(
-       <ImageBackground source={require('../assets/auction.jpg')}
-       style={styles.bg}>
-         <View style={styles.container}>
+        <ImageBackground source={require('../assets/auction.jpg')}
+        style={styles.bg}>
+            <View style={styles.container}>
+                <View  style={styles.uploadBox}>
+                    <View style={styles.info}>
+                        <Button 
+                        style={styles.uploadImageBtn} 
+                        icon="arrow-down-drop-circle-outline" 
+                        mode="contained" 
+                        onPress={() => console.log('Pressed')}>
+                                Upload Image
+                        </Button>
 
-<View  style={styles.uploadBox}>
-    <View style={styles.info}>
-    <   Button style={styles.uploadImageBtn} icon="arrow-down-drop-circle-outline" mode="contained" onPress={() => console.log('Pressed')} >
-            Upload Image
-        </Button>
-        <TextInput style={styles.title} onChangeText={newtitle => setTitle(newtitle)} placeholder="Type in your Title">
+                        {/* <TextInput
+                        style={styles.title} 
+                        onChangeText={newtitle => setTitle(newtitle)} 
+                        placeholder="Type in your Title"/>
 
-        </TextInput>
-    <View>
-
-        <TextInput style={styles.startingBid} onChangeText={newstartingBid => setstartBid(newstartingBid)} placeholder="starting bid" keyboardType="numeric" >
-        </TextInput>
-    </View>
-    <View>
-        <TextInput style={styles.bidTime} placeholder="dd/mm/yy" keyboardType="numeric"></TextInput>
-</View>
-<View>
-   <TextInput style={styles.desc} onChangeText={newdesc => setDesc(newdesc)} multiline={true} placeholder="Type in your Description">  
-    </TextInput>
-</View>
-</View>
-<Button style={styles.uploadButton} icon="arrow-up-bold-circle-outline" mode="contained" onPress={() => console.log('Pressed')} >
-           Upload 
-        </Button>
-    <Text style={styles.categorytext}>
-        Select your Category
-    </Text>
-    <View style={styles.CategoriesBlock}>
-
-        <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-            Resource
-        </Button>
-        <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-            Art
-        </Button>
-        <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-           Science
-        </Button>  
-</View>
-    <View style={styles.CategoriesBlock}>
-        <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-            Fashion
-        </Button>
-        <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-            Game
-        </Button>
-        <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-           Housing
-        </Button>
-        
-    </View>
-    <View style={styles.CategoriesBlock}>
-
-        <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-            History
-        </Button>
-        <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-           Informatio
-        </Button>
-        <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-           Stocks
-        </Button>
-        
-    </View>
-            <View style={styles.CategoriesBlock}>
-
-            <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-                Music
-            </Button>
-            <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-            Accesories
-            </Button>
-            <Button style={styles.categoriesbtn} icon="plus" mode="contained" onPress={() => console.log('Pressed')} >
-            Electronics
-            </Button>
+                        <View>
+                            <TextInput 
+                            style={styles.startingBid} 
+                            onChangeText={newstartingBid => setstartBid(newstartingBid)} 
+                            placeholder="starting bid" 
+                            keyboardType="numeric" />
+                        </View>
+                        <View>
+                            <TextInput 
+                            style={styles.bidTime} 
+                            placeholder="dd/mm/yy" 
+                            keyboardType="numeric"/>
+                        </View>
+                        <View>
+                            <TextInput 
+                            style={styles.desc} 
+                            onChangeText={newdesc => setDesc(newdesc)} 
+                            multiline={true} 
+                            placeholder="Type in your Description"/>  
+                        </View> */}
+                    </View> {/*info*/}
+                    
+                </View> {/*uploadBox*/}
             </View>
-        </View>
-    </View>
-</ImageBackground>
+        </ImageBackground>
     )
 }
 
