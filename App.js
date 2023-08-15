@@ -1,9 +1,10 @@
-import { Home } from "./screens/Home";
+import { StackNavigation } from "./screens/stack-navigation";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
-    <>
-    <Home/>
-    </>
-  );
+    <NavigationContainer>
+      <StackNavigation/>
+    </NavigationContainer>
+  )
 }
