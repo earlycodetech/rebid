@@ -2,7 +2,7 @@ import { View,Text,ImageBackground,StyleSheet } from "react-native";
 import { theme } from "../config/theme";
 import { Button } from "react-native-paper";
 
-export function Starter() {
+export function Starter({navigation}) {
     return (
         <ImageBackground
         source={require('../assets/rebid_intro_bg.jpg')}
@@ -15,7 +15,9 @@ export function Starter() {
                     </Text>
                 </View>
 
-                <Button mode="contained">CONTINUE</Button>
+                <Button 
+                mode="contained"
+                onPress={() => navigation.navigate('my-home')}>CONTINUE</Button>
             </View>
         </ImageBackground>
     )
